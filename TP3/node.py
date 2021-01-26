@@ -36,4 +36,19 @@ class Node:
             node = node.link
         liste.append(node.data)
         return str(liste) + "\n"
+    def __eq__(self, object_two):
+        """
+        check equality of two objects
+        ----------
+        Parameters
+        ----------
+        object_two : objet
+            second object resembling the first
+        ---------
+        Returns
+        -------
+        Bool
+            returns True if equality is confirmed otherwise False
+        """
+        return self.__dict__ == object_two.__dict__
     
