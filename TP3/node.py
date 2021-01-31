@@ -36,7 +36,7 @@ class Node:
             node = node.link
         liste.append(node.data)
         return str(liste) + "\n"
-    def __eq__(self, object_two):
+    def equality(self, object_two):
         """
         check equality of two objects
         ----------
@@ -51,4 +51,3 @@ class Node:
             returns True if equality is confirmed otherwise False
         """
         return self.__dict__ == object_two.__dict__
-    
