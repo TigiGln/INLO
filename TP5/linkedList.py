@@ -77,3 +77,5 @@ class LinkedList:
         while node is not None:
             yield node
             node = node.next
+    def list_is_empty(self):
+        return not self.head

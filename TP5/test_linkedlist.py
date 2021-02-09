@@ -5,10 +5,10 @@ Created on Sat Feb  6 10:43:02 2021
 @author: thierry
 Used to test the methods of the Linkedlist class
 """
-import sys
+#import sys
 import unittest
 import linkedList
-sys.path.append("..")
+#sys.path.append("..")
 class TestLinkList(unittest.TestCase):
     """
     Test_linklist Object
