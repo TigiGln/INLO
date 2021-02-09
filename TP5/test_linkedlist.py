@@ -54,7 +54,7 @@ class TestLinkList(unittest.TestCase):
         of our linked list
         """
         self.liste.add_first(linkedList.Node("e"))
-        result = str(self.liste)
-        self.assertEqual(result[2], "e")
+        result = list(self.liste)
+        self.assertEqual(str(result[0]), "e")
 if __name__ == '__main__':
     unittest.main()
