@@ -10,8 +10,8 @@ INLO/TP5/test_unitaire$ pylint test_linkedlist.py --py3k --enable=all --disable=
 -------------------------------------------------------------------
 Your code has been rated at 10.00/10 (previous run: 8.21/10, +1.79)
 
-pylint 10/10 si on met la commande sys.path.append("..") après l'import du module LinkedList mais python n'arrive pas à trouver le module car dans un dossier parent.
-Si je met sys.path.append("..") après, le pylint passe à 9.62/10:
+Le pylint est à 10/10, si on met la commande sys.path.append("..") après l'import du module linkedList. Cependant python n'arrive pas à trouver le module car le fichier linkedList est dans le dossier parent.
+Si je met sys.path.append("..") avant l'import du module linkedList, le pylint passe à 9.62/10:
 
 (base) thierry@thierry-HP:~/cours_master_DLAD/semestre_2/Ingénieurie_logicielle/
 INLO/TP5/test_unitaire$ pylint test_linkedlist.py --py3k --enable=all --disable=print-statement,no-absolute-import
@@ -21,7 +21,7 @@ test_linkedlist.py:11:0: C0413: Import "import linkedList" should be placed at t
 -------------------------------------------------------------------
 Your code has been rated at 9.62/10 (previous run: 10.00/10, -0.38)
 
-Je n'arrive donc pas à avoir un pylint à 10/10 si je mets le fichier test_linkedlist.py dans un sous répertoire test.
+Je n'arrive donc pas à avoir un pylint à 10/10 et un code fonctionnel si je mets le fichier test_linkedlist.py dans un sous répertoire test.
 
 
 Dans le même répertoire, le pylint:
