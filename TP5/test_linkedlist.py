@@ -25,6 +25,11 @@ class TestLinkList(unittest.TestCase):
         self.liste2 = linkedList.LinkedList(["g", "c", "f"])
     def test_list_empty(self):
         """
+        Test if the list is empty
+        """
+        self.assertTrue(str(self.liste1.list_is_empty()))
+    def test_no_delete_list_empty(self):
+        """
         Test allowing the verification of an empty list
         and the return Raise Exception
         """
