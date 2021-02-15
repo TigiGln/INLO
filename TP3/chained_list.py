@@ -15,11 +15,26 @@ class Chainedlist:
         list that we want to transfert in a chained list of Node object
     """
     def __init__(self, list_elt):
-        node_link = None
-        for index in range((len(list_elt)-1), -1, -1):
-            node = list_elt[index]
-            node_link = Node(node, node_link)
-        self.first_node = node_link
+        self.first_node = None
+        if list_elt != None and len(list_elt) != 0:
+            node_link = None
+            for index in range((len(list_elt)-1), -1, -1):
+                node = list_elt[index]
+                node_link = Node(node, node_link)
+            self.first_node = node_link
+    def get(self, index):
+        if self.first_node == None:
+            raise ValueError("Node empty")
+            
+    def recursion(self, index, node):
+        print(index, node)
+        if node is not None:
+            return index, node
+        elif index == 0:
+            return index, node
+        else:
+            return self.recursion(index-1, node.link)
+        
     def __str__(self):
         """
         Allows to display the list of nodes in a string format
