@@ -9,6 +9,7 @@ Created on Sat Feb 13 12:22:29 2021
 import re
 from tkinter import Label
 from tkinter import Tk
+from tkinter.messagebox import askokcancel
 from tkinter.messagebox import askquestion
 from tkinter.messagebox import showwarning
 from interface import creation_view
@@ -90,8 +91,10 @@ def delete():
     """
     name = widgets_entry["Nom"].get().upper()
     if name in dico_individuals:
-        del dico_individuals[name]
-        message["text"] = "L'individus " + name + " a bien été effacé du carnet d'adresse."
+        confirm = askokcancel(message="Êtes-vous sûr")
+        if confirm:
+            del dico_individuals[name]
+            message["text"] = "L'individus " + name + " a bien été effacé du carnet d'adresse."
 
 def save_and_quit():
     """
