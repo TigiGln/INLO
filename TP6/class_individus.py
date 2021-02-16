@@ -14,4 +14,4 @@ class Individu:
         self.address = adresse
         self.city = ville
     def __str__(self):
-        return self.name
+        return self.name + " " + " " + self.firstname
